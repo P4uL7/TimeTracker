@@ -40,20 +40,20 @@ public class BasePanel extends JPanel {
 
 	private final String PATH = "C:\\Users\\" + System.getProperty("user.name") + "\\Documents\\TimeTrackerData\\" + currentYear + "_week" + weekNumber;
 
-	final static int LEFT_OFFSET = 350;
+	final static int LEFT_OFFSET = 50; // 350
 	final static int TOP_OFFSET = 25;
 
 	public BasePanel() {
 
 		this.setLayout(null);
-		this.setPreferredSize(new Dimension(900, 325));
+		this.setPreferredSize(new Dimension(900 - 300, 325));
 		this.setBorder(new EmptyBorder(30, 30, 30, 30));
 
 		checkFile();
 		createLabels();
 		createButtons();
 		createWeekLabels();
-		createCalendar();
+		// createCalendar();
 
 		updateTotal();
 		createResetButton();

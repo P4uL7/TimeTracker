@@ -1,6 +1,5 @@
 package gui;
 
-
 import java.awt.EventQueue;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -13,6 +12,10 @@ import javax.swing.UnsupportedLookAndFeelException;
 
 public class MainGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
+
+	public static final String THEME = "com.jtattoo.plaf.acryl.AcrylLookAndFeel";
+	// "javax.swing.plaf.nimbus.NimbusLookAndFeel"
+	// "com.sun.java.swing.plaf.windows.WindowsLookAndFeel"
 
 	public MainGUI() {
 		initUI();
@@ -32,8 +35,7 @@ public class MainGUI extends JFrame {
 
 	private void initUI() {
 		try {
-			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
-			// UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+			UIManager.setLookAndFeel(THEME);
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
 			e.printStackTrace();
 		}
